@@ -5,10 +5,14 @@ let count = 0
 
 countButton.addEventListener("click", () => {
     count += 1
-    countButton.innerText = `${count} clics!`
+    if (count < 2) {
+        countButton.innerText = `${count} clic !`
+    } else {
+        countButton.innerText = `${count} clics !`
+    }
 })
 
 resetButton.addEventListener("click", () => {
     count = 0
-    countButton.innerText = `${count} clics!`
+    countButton.innerText = `${count} clic !`
 })
